@@ -6,11 +6,11 @@ SRC = ./src/ft_checkandreturn.c  \
 	./src/ft_strrchr.c \
 	./src/ft_putchar_fd.c \
 	./src/ft_putnbr_fd.c \
-	./src/ft_atoi.c
+	./src/ft_atoi.c \
+	./src/ft_strlen.c
 
 
-INCLUDES = ./includes/ft_printf.h \
-			./includes/ft_libft.h 
+INCLUDES = ./includes/ft_printf.h 
 
 OBJECTS = $(SRC:.c=.o)
 

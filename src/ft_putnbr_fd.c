@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: diegmore <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: diemorei <diemorei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 16:56:00 by diegmore          #+#    #+#             */
-/*   Updated: 2023/10/10 16:56:06 by diegmore         ###   ########.fr       */
+/*   Updated: 2023/10/16 21:37:01 by diemorei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
-#include "../includes/libft.h"
+
 
 static int	ft_isnegative(int n, int fd)
 {

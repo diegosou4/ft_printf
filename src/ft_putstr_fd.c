@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: diegmore <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: diemorei <diemorei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 12:59:19 by diegmore          #+#    #+#             */
-/*   Updated: 2023/10/10 12:59:30 by diegmore         ###   ########.fr       */
+/*   Updated: 2023/10/16 22:02:47 by diemorei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../includes/ft_printf.h"
 
-void	ft_putstr_fd(char *s, int fd)
+
+int	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
 
@@ -22,4 +23,6 @@ void	ft_putstr_fd(char *s, int fd)
 		ft_putchar_fd(s[i], fd);
 		i++;
 	}
+	printf("%i valor q ta sendo retornado na putstr ------- \n", i);
+	return(i);
 }

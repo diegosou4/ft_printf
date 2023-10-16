@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: diegmore <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: diemorei <diemorei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 12:35:00 by diegmore          #+#    #+#             */
-/*   Updated: 2023/10/05 12:40:51 by diegmore         ###   ########.fr       */
+/*   Updated: 2023/10/16 21:31:46 by diemorei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
-#include "../includes/libft.h"
+
 
 int	ft_atoi(const char *str)
 {
