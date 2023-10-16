@@ -6,7 +6,7 @@
 /*   By: diemorei <diemorei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 12:59:19 by diegmore          #+#    #+#             */
-/*   Updated: 2023/10/16 22:02:47 by diemorei         ###   ########.fr       */
+/*   Updated: 2023/10/16 22:36:55 by diemorei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ int	ft_putstr_fd(char *s, int fd)
 		ft_putchar_fd(s[i], fd);
 		i++;
 	}
-	printf("%i valor q ta sendo retornado na putstr ------- \n", i);
+
 	return(i);
 }

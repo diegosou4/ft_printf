@@ -5,7 +5,7 @@
 
 int main()
 {
-    printf("tamanho do meu  %i ",ft_printf("diego %c", 'd'));
-    printf("\ntamanho do original  %i ",printf("diego %c", 'd'));
+    printf("tamanho do meu  :%i\n",ft_printf("%i", 11));
+    printf("tamanho do original  %i:",printf("%i", 11));
   
 }
