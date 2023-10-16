@@ -1,46 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: diegmore <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 11:27:57 by diegmore          #+#    #+#             */
-/*   Updated: 2023/10/16 11:27:59 by diegmore         ###   ########.fr       */
+/*   Created: 2023/10/05 12:35:00 by diegmore          #+#    #+#             */
+/*   Updated: 2023/10/05 12:40:51 by diegmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 #include "../includes/libft.h"
-#include <stdarg.h>
 
-int ft_printf(const char *format, ...)
+int	ft_atoi(const char *str)
 {
-    va_list list;
+	int	i;
+	int	sign;
+	int	result;
 
-    va_start(list,format);
-    int i;
-    i = 0;
-    while(format[i])
-    {
-        if(format[i] == '%' && ft_strrchr("cspdiuxX%",format[i + 1]))
-        {
-           ft_checkandreturn(format, i, list);
-           i++;
-        }else{
-            ft_putchar_fd(format[i],1);
-        }
-        i++;
-    }
-    va_end(list);
-    return 0;
+	result = 0;
+	i = 0;
+	sign = 1;
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
+		i++;
+	if (str[i] == '+' || str[i] == '-')
+	{
+		if (str[i] == '-')
+			sign *= -1;
+		i++;
+	}
+	while (str[i] >= 48 && str[i] <= 57)
+	{
+		result *= 10;
+		result += str[i] - 48;
+		i++;
+	}
+	return (result * sign);
 }
-
-/*
-int main()
-{
-    ft_printf("ola mundo");
-
-}*/
-
-

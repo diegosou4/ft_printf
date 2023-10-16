@@ -1,19 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: diegmore <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/14 12:32:24 by diegmore          #+#    #+#             */
-/*   Updated: 2023/10/14 12:38:00 by diegmore         ###   ########.fr       */
+/*   Created: 2023/10/10 16:56:00 by diegmore          #+#    #+#             */
+/*   Updated: 2023/10/10 16:56:06 by diegmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 #include "../includes/libft.h"
 
-void	ft_putchar(char c)
+static int	ft_isnegative(int n, int fd)
 {
-	write(1, &c, 1);
+	if (n < 0)
+	{
+		n *= -1;
+		write(fd, "-", 1);
+	}
+	return (n);
+}
+
+void	ft_putnbr_fd(int n, int fd)
+{
+	int	i;
+
+	i = 0;
+	if (n == -2147483648)
+	{
+		write(fd, "-2147483648", 11);
+		return ;
+	}
+	n = ft_isnegative(n, fd);
+	if (n > 9)
+	{
+		i = i + (n % 10);
+		ft_putnbr_fd(n / 10, fd);
+		i = i + '0';
+		write(fd, &i, 1);
+		return ;
+	}
+	else
+	{
+		n += '0';
+		write(fd, &n, 1);
+	}
 }

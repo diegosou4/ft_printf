@@ -1,22 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: diegmore <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 15:22:06 by diegmore          #+#    #+#             */
-/*   Updated: 2023/10/16 15:23:48 by diegmore         ###   ########.fr       */
+/*   Created: 2023/10/04 11:29:14 by diegmore          #+#    #+#             */
+/*   Updated: 2023/10/04 13:58:29 by diegmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
-#include <stdarg.h>
 
-int ft_printf(const char *format,...);
-void ft_checkandreturn(const char *format, int i, va_list list);
+#include "../includes/libft.h"
 
 
+char	*ft_strrchr(const char *str, int c)
+{
+	int	i;
 
-#endif
+	i = 0;
+	while (str[i])
+		i++;
+	while (i >= 0)
+	{
+		if (str[i] == (char)c)
+			return ((char *)(str + i));
+		i--;
+	}
+	return (0);
+}

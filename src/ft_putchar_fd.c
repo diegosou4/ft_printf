@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: diegmore <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 15:22:06 by diegmore          #+#    #+#             */
-/*   Updated: 2023/10/16 15:23:48 by diegmore         ###   ########.fr       */
+/*   Created: 2023/10/10 12:53:21 by diegmore          #+#    #+#             */
+/*   Updated: 2023/10/10 12:53:23 by diegmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
-#include <stdarg.h>
+#include "../includes/libft.h"
 
-int ft_printf(const char *format,...);
-void ft_checkandreturn(const char *format, int i, va_list list);
-
-
-
-#endif
+void	ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, 1);
+}
