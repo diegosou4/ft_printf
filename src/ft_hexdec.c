@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_hexdec.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: diemorei <diemorei@student.42.fr>          +#+  +:+       +#+        */
+/*   By: diegmore <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 12:59:19 by diegmore          #+#    #+#             */
-/*   Updated: 2023/10/16 22:36:55 by diemorei         ###   ########.fr       */
+/*   Created: 2023/10/17 14:53:40 by diegmore          #+#    #+#             */
+/*   Updated: 2023/10/17 14:53:42 by diegmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "../includes/ft_printf.h"
 
-int	ft_putstr_fd(char *s, int fd)
-{
-	int	i;
 
-	i = 0;
-	while (s[i])
+int 	ft_hexdec(unsigned nbr, char *base)
+{
+	int length;
+
+	length = 0;
+
+	if(nbr >= 16)
 	{
-		ft_putchar_fd(s[i], fd);
-		i++;
+		length += ft_hexdec((nbr / 16),base);
+		length += ft_hexdec((nbr % 16),base);
+	}else{
+		write(1, &base[nbr], 1);
+		length++;
 	}
-	return (i);
+	return(length);
 }

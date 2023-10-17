@@ -4,10 +4,12 @@ SRC = ./src/ft_checkandreturn.c  \
 	./src/ft_printf.c \
 	./src/ft_putstr_fd.c \
 	./src/ft_strrchr.c \
+	./src/ft_hexdec.c \
 	./src/ft_putchar_fd.c \
 	./src/ft_putnbr_fd.c \
 	./src/ft_atoi.c \
-	./src/ft_strlen.c
+	./src/ft_strlen.c \
+	
 
 
 INCLUDES = ./includes/ft_printf.h 

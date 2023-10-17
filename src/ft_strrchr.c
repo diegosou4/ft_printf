@@ -10,9 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../includes/ft_printf.h"
-
 
 char	*ft_strrchr(const char *str, int c)
 {

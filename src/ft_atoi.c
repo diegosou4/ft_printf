@@ -12,7 +12,6 @@
 
 #include "../includes/ft_printf.h"
 
-
 int	ft_atoi(const char *str)
 {
 	int	i;

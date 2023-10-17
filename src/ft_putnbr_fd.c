@@ -12,7 +12,6 @@
 
 #include "../includes/ft_printf.h"
 
-
 static int	ft_isnegative(int n, int fd)
 {
 	if (n < 0)
@@ -28,10 +27,10 @@ static int	ft_countwordls(int n)
 	int	wordls;
 
 	wordls = 0;
-	if(n < 0)
+	if (n < 0)
 	{
 		wordls++;
-		n *= -1; 
+		n *= -1;
 	}
 	if (n == 0)
 		wordls++;
@@ -43,17 +42,18 @@ static int	ft_countwordls(int n)
 	return (wordls);
 }
 
-int		ft_putnbr_fd(int n, int fd)
+int	ft_putnbr_fd(int n, int fd)
 {
 	int	i;
-	int worlds;
+	int	worlds;
+
 	worlds = 0;
 	i = 0;
 	worlds = ft_countwordls(n);
 	if (n == -2147483648)
 	{
 		write(fd, "-2147483648", 11);
-		return(11) ;
+		return (11);
 	}
 	n = ft_isnegative(n, fd);
 	if (n > 9)
@@ -62,12 +62,12 @@ int		ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(n / 10, fd);
 		i = i + '0';
 		write(fd, &i, 1);
-		return(worlds);
+		return (worlds);
 	}
 	else
 	{
 		n += '0';
 		write(fd, &n, 1);
 	}
-	return(worlds);
+	return (worlds);
 }
