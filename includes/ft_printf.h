@@ -17,12 +17,12 @@
 # include <unistd.h>
 
 int		ft_printf(const char *format, ...);
-int		ft_checkandreturn(const char *format, int i, int length, va_list list);
-char	*ft_strrchr(const char *str, int c);
-int		ft_putstr_fd(char *s, int fd);
-int		ft_putchar_fd(char c, int fd);
+int		ft_printc(const char *format, int i, int length, va_list list);
+int	    ft_strrchr(const char *str, int c);
+int	    ft_putstr(char *s);
+int		ft_putchar(char c);
 int		ft_atoi(const char *str);
-int		ft_putnbr_fd(int n, int fd);
+int		ft_putnbr(int n);
 int		ft_strlen(char *str);
 int 	ft_hexdec(unsigned nbr, char *base);
 

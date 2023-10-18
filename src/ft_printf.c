@@ -26,12 +26,12 @@ int	ft_printf(const char *format, ...)
 	{
 		if (format[i] == '%' && ft_strrchr("cspdiuxX%", format[i + 1]))
 		{
-			length = ft_checkandreturn(format, i, length, list);
+			length = ft_printc(format, i, length, list);
 			i++;
 		}
 		else
 		{
-			length += ft_putchar_fd(format[i], 1);
+			length += ft_putchar(format[i]);
 		}
 		i++;
 	}

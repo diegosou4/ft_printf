@@ -12,18 +12,19 @@
 
 #include "../includes/ft_printf.h"
 
-char	*ft_strrchr(const char *str, int c)
+int	ft_strrchr(const char *str, int c)
 {
 	int	i;
-
+	int j;
+	j = 0;
 	i = 0;
 	while (str[i])
 		i++;
-	while (i >= 0)
+	while (i >= j)
 	{
-		if (str[i] == (char)c)
-			return ((char *)(str + i));
-		i--;
+		if (str[j] == (char)c)
+			return (1);
+		j++;
 	}
 	return (0);
 }

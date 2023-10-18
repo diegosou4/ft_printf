@@ -12,17 +12,19 @@
 
 #include "../includes/ft_printf.h"
 
-int	ft_checkandreturn(const char *format, int i, int length, va_list list)
+int	ft_printc(const char *format, int i, int length, va_list list)
 {
 	if (format[i + 1] == 's')
-		length += ft_putstr_fd((char *)va_arg(list, char *), 1);
+		return ((length += ft_putstr((char *)va_arg(list, char *))));
 	else if (format[i + 1] == 'c')
-		length += ft_putchar_fd(va_arg(list, int), 1);
+		return ((length += ft_putchar(va_arg(list, int))));
 	else if (format[i + 1] == 'i' || format[i + 1] == 'd')
-		length += ft_putnbr_fd(va_arg(list, int), 1);
+		return ((length += ft_putnbr(va_arg(list, int))));
 	else if (format[i + 1] == 'x')
-		length += ft_hexdec(va_arg(list, unsigned int), "0123456789abcdef");
+		return ((length += ft_hexdec(va_arg(list, unsigned int), "0123456789abcdef")));
 	else if (format[i + 1] == 'X')
-		length += ft_hexdec(va_arg(list, unsigned int), "0123456789ABCDEF");
+		return ((length += ft_hexdec(va_arg(list, unsigned int), "0123456789ABCDEF")));
+	else if(format[i + 1] == '%' )
+		return((length += ft_putchar('%')));
 	return (length);
 }

@@ -1,12 +1,12 @@
 NAME = libftprintf.a
 CC = cc
-SRC = ./src/ft_checkandreturn.c  \
+SRC = ./src/ft_printc.c  \
 	./src/ft_printf.c \
-	./src/ft_putstr_fd.c \
+	./src/ft_putstr.c \
 	./src/ft_strrchr.c \
 	./src/ft_hexdec.c \
-	./src/ft_putchar_fd.c \
-	./src/ft_putnbr_fd.c \
+	./src/ft_putchar.c \
+	./src/ft_putnbr.c \
 	./src/ft_atoi.c \
 	./src/ft_strlen.c \
 	
