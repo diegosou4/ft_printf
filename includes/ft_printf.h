@@ -24,6 +24,6 @@ int		ft_putchar(char c);
 int		ft_atoi(const char *str);
 int		ft_putnbr(int n);
 int		ft_strlen(char *str);
-int 	ft_hexdec(unsigned nbr, char *base);
+int 	ft_hexdec(unsigned long long int nbr, char *base);
 
 #endif

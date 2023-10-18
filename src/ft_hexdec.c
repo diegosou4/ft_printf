@@ -14,7 +14,7 @@
 #include "../includes/ft_printf.h"
 
 
-int 	ft_hexdec(unsigned nbr, char *base)
+int 	ft_hexdec(unsigned long long int nbr, char *base)
 {
 	int length;
 
