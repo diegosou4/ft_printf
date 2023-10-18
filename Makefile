@@ -9,7 +9,6 @@ SRC = ./src/ft_printc.c  \
 	./src/ft_putnbr.c \
 	./src/ft_atoi.c \
 	./src/ft_strlen.c \
-	
 
 
 INCLUDES = ./includes/ft_printf.h 
