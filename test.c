@@ -10,10 +10,10 @@ int main() {
 
     //ft_printf("%x",140729585118572);
 
-    printf("%p%p printf \n", NULL, NULL);
-     ft_printf("%p%p ft_printf \n", NULL, NULL);
+     //t_printf("FT O endereço de var é: %p\n", &var);
+     printf("%i ft\n",ft_printf("O valor de ptr é: %p\n", ptr));
     
-//    printf("FT O endereço de var é: %p\n", &var);
-//     printf("FT O valor de ptr é: %p\n", ptr);
-    return 0;
+    //printf("O endereço de var é: %p\n", &var);
+    printf("%i  printf \n",printf("O valor de ptr é: %p\n", ptr));
+
 }

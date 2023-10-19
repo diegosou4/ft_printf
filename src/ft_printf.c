@@ -6,7 +6,7 @@
 /*   By: diemorei <diemorei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 11:27:57 by diegmore          #+#    #+#             */
-/*   Updated: 2023/10/16 22:04:26 by diemorei         ###   ########.fr       */
+/*   Updated: 2023/10/19 10:45:31 by diemorei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_printf(const char *format, ...)
 	va_start(list, format);
 	i = 0;
 	length = 0;
-	while (format[i])
+	while (format[i] != '\0')
 	{
 		if (format[i] == '%' && ft_strrchr("cspdiuxX%", format[i + 1]))
 		{
@@ -39,9 +39,3 @@ int	ft_printf(const char *format, ...)
 	return (length);
 }
 
-/*
-int	main(void)
-{
-    ft_printf("ola mundo");
-
-}*/
