@@ -6,11 +6,11 @@
 /*   By: diemorei <diemorei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 13:00:42 by diegmore          #+#    #+#             */
-/*   Updated: 2023/10/19 10:26:20 by diemorei         ###   ########.fr       */
+/*   Updated: 2023/10/19 11:25:38 by diemorei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
 
 int	ft_printc(const char *format, int i, int length, va_list list)
 {

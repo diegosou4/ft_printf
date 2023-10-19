@@ -1,16 +1,11 @@
 
-
+#include "ft_printf.h"
 
 static int	ft_countwordls(unsigned int n)
 {
 	int	wordls;
 
 	wordls = 0;
-	if (n < 0)
-	{
-		wordls++;
-		n *= -1;
-	}
 	if (n == 0)
 		wordls++;
 	while (n != 0)

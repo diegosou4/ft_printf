@@ -6,12 +6,12 @@
 /*   By: diemorei <diemorei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 14:53:40 by diegmore          #+#    #+#             */
-/*   Updated: 2023/10/19 10:30:50 by diemorei         ###   ########.fr       */
+/*   Updated: 2023/10/19 11:25:31 by diemorei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
 
 
 int 	ft_hexdec(unsigned long long int nbr, char *base)

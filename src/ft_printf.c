@@ -6,11 +6,11 @@
 /*   By: diemorei <diemorei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 11:27:57 by diegmore          #+#    #+#             */
-/*   Updated: 2023/10/19 10:45:31 by diemorei         ###   ########.fr       */
+/*   Updated: 2023/10/19 11:25:44 by diemorei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
 #include <stdarg.h>
 
 int	ft_printf(const char *format, ...)
