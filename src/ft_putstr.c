@@ -22,7 +22,6 @@ int	ft_putstr(char *s)
 		ft_putstr("(null)");
 		return (6);
 	}
-
 	while (s[i])
 	{
 		ft_putchar(s[i]);

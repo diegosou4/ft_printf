@@ -41,14 +41,15 @@ static int	ft_countwordls(int n)
 	}
 	return (wordls);
 }
-static int ft_minint(int n)
+
+static int	ft_minint(int n)
 {
 	if (n == INT_MIN)
 	{
 		write(1, "-2147483648", 11);
 		return (1);
 	}
-	return(0);
+	return (0);
 }
 
 int	ft_putnbr(int n)

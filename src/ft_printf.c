@@ -12,14 +12,13 @@
 
 #include "../includes/ft_printf.h"
 
-
 int	ft_printf(const char *format, ...)
 {
 	va_list	list;
 	int		length;
 	int		i;
-	int 	lengthformat;
-	
+	int		lengthformat;
+
 	va_start(list, format);
 	lengthformat = ft_strlen((char *)format);
 	i = 0;

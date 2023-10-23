@@ -10,15 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../includes/ft_printf.h"
 
-int ft_printp(unsigned long long int nbr)
+int	ft_printp(unsigned long long int nbr)
 {
-    int length;
+	int	length;
 
-    length = 0;
-	if(nbr == 0)
+	length = 0;
+	if (nbr == 0)
 	{
 		write(1, "(nil)", 5);
 		return ((length += 5));
