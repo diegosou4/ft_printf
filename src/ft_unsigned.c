@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_unsigned.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: diemorei <diemorei@student.42.fr>          +#+  +:+       +#+        */
+/*   By: diegmore <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 16:56:00 by diegmore          #+#    #+#             */
-/*   Updated: 2023/10/16 22:27:55 by diemorei         ###   ########.fr       */
+/*   Created: 2023/10/23 12:33:41 by diegmore          #+#    #+#             */
+/*   Updated: 2023/10/23 12:34:37 by diegmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-static int	ft_isnegative(int n)
-{
-	if (n < 0)
-	{
-		n *= -1;
-		write(1, "-", 1);
-	}
-	return (n);
-}
 
-static int	ft_countwordls(int n)
+static int	ft_countwordls(unsigned int n)
 {
 	int	wordls;
 
@@ -41,39 +32,30 @@ static int	ft_countwordls(int n)
 	}
 	return (wordls);
 }
-static int ft_minint(int n)
-{
-	if (n == INT_MIN)
-	{
-		write(1, "-2147483648", 11);
-		return (1);
-	}
-	return(0);
-}
 
-int	ft_putnbr(int n)
+int ft_unsigned(unsigned int n)
 {
-	int	i;
-	int	worlds;
-
-	worlds = 0;
-	i = 0;
-	worlds = ft_countwordls(n);
-	if (ft_minint(n))
-		return (11);
-	n = ft_isnegative(n);
-	if (n > 9)
+    int length;
+    int i;
+    i = 0;
+    length = ft_countwordls(n);
+    if(n == INT_MIN)
+    {
+        write(1, "2147483648", 10);
+        return (10);
+    }
+    if (n > 9)
 	{
 		i = i + (n % 10);
 		ft_putnbr(n / 10);
 		i = i + '0';
 		write(1, &i, 1);
-		return (worlds);
+		return (length);
 	}
 	else
 	{
 		n += '0';
 		write(1, &n, 1);
 	}
-	return (worlds);
+	return (length);
 }

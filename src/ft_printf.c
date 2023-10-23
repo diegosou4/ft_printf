@@ -6,20 +6,22 @@
 /*   By: diemorei <diemorei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 11:27:57 by diegmore          #+#    #+#             */
-/*   Updated: 2023/10/19 11:25:44 by diemorei         ###   ########.fr       */
+/*   Updated: 2023/10/16 22:04:26 by diemorei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
-#include <stdarg.h>
+#include "../includes/ft_printf.h"
+
 
 int	ft_printf(const char *format, ...)
 {
 	va_list	list;
 	int		length;
 	int		i;
-
+	int 	lengthformat;
+	
 	va_start(list, format);
+	lengthformat = ft_strlen((char *)format);
 	i = 0;
 	length = 0;
 	while (format[i] != '\0')
@@ -39,3 +41,9 @@ int	ft_printf(const char *format, ...)
 	return (length);
 }
 
+/*
+int	main(void)
+{
+    ft_printf("ola mundo");
+
+}*/
