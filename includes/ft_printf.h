@@ -22,7 +22,6 @@ int	ft_printc(const char *format, int i, int length, va_list list);
 int	ft_strrchr(const char *str, int c);
 int	ft_putstr(char *s);
 int	ft_putchar(char c);
-int	ft_atoi(const char *str);
 int	ft_putnbr(int n);
 int	ft_strlen(char *str);
 int	ft_hexdec(unsigned long long int nbr, char *base);

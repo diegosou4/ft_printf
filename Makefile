@@ -1,5 +1,7 @@
 NAME = libftprintf.a
 CC = cc
+INCLUDES = ./includes/ft_printf.h 
+CFLAGS = -Wall -Wextra -Werror -I./includes
 SRC = ./src/ft_printc.c  \
 	./src/ft_printf.c \
 	./src/ft_putstr.c \
@@ -12,10 +14,7 @@ SRC = ./src/ft_printc.c  \
 	./src/ft_unsigned.c \
 
 
-INCLUDES = ./includes/ft_printf.h 
-
 OBJECTS = $(SRC:.c=.o)
-
 
 all: $(NAME)
 
@@ -27,3 +26,5 @@ clean:
 fclean: clean
 	rm -rf $(NAME)
 re:	fclean all
+
+.PHONY: all clean fclean

@@ -10,12 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
 
 int	ft_printc(const char *format, int i, int length, va_list list)
 {
 	if (format[i + 1] == 's')
-		return ((length += ft_putstr((char *)va_arg(list, char *))));
+		return (length += ft_putstr(va_arg(list, char *)));
 	else if (format[i + 1] == 'c')
 		return ((length += ft_putchar(va_arg(list, int))));
 	else if (format[i + 1] == 'i' || format[i + 1] == 'd')
