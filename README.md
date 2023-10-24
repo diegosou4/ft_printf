@@ -1,35 +1,31 @@
 # FT_PRINTF
 
 # Sobre o projeto
-O projeto tem como objetivo replicar alguns comportamentos da funcao printf, as flags que devem ser replicadas sao: "cspdiuxX".
-Sendo %c para char ,%s para string ,%p para pointer hex, %d para digito, %i para inteiro, %u para unsigned int,
-%x para decimal em lowercase e %X para decimal Uppercase.
+O projeto tem como objetivo replicar alguns comportamentos da função printf. As flags que devem ser replicadas são: "cspdiuxX".
+Isso significa que o formato %c é usado para caracteres, %s para strings, %p para ponteiros em hexadecimal, %d para números decimais
+, %i para inteiros, %u para inteiros não assinados, %x para números decimais em minúsculas e %X 
+para números decimais em maiúsculas.
 
 
 ## Como eu fiz
 ### Introdução
-Utilizei algumas bibliotecas para auxiliar na criação desse projeto, como sabemos o printf
-basicamente usa a funcao write e conta o numero de caracteres impressos na tela, com isso
-usei a biblioteca <unistd.h> para ter acesso a funcao write, usei a <stdarg.h>, pois uma 
-das particularidades do printf e aceitar uma quantidade de argumentos indefinidas,
-e dentro dessa biblioteca temos algumas macros que nos ajudam a tratar disso,
-no caso va_list, va_start, va_arg e var_end. A bilioteca <limits.h> foi
-para usar em um pequeno trecho do codigo para nao precisar escrever o valor do
-INT_MIN.
+Para criar esse projeto, utilizei algumas bibliotecas para auxiliar na sua implementação.
+Como sabemos, o printf basicamente usa a função write para contar o número de caracteres impressos na tela.
+Para isso, utilizei a biblioteca <unistd.h> para ter acesso à função write. Além disso, utilizei 
+a biblioteca <stdarg.h>, pois uma das particularidades do printf é aceitar uma quantidade 
+indefinida de argumentos. Dentro dessa biblioteca, temos algumas macros que nos ajudam a lidar com isso
+, como va_list, va_start, va_arg e va_end. A biblioteca <limits.h> foi usada em
+um trecho do código para evitar escrever o valor de INT_MIN.
 
 ### Resumo
-o nosso protopito da funcao seria int	ft_printf(const char *format, ...) Aqui indicamos com (...) 
-que pode aceitar a quantidade de argumentos que quiser depois inicializamos nossa macro
-criamos uma va_list list;
+O protótipo da função que desenvolvemos é int ft_printf(const char *format, ...). Aqui, o ... indica que a função pode aceitar uma quantidade variável de argumentos. Inicializamos uma macro criando uma va_list list:
 
-- Quando fazemos um va_start inicilizamos o primeiro argumento
-- Quando fazemos var_arg vamos para o proximo argumento
-- Dentro do var_arg(lista, tipo que variavel deve ser) , a lista e o tipo que ela deve ter
-- Usamos o var_end para informar que termimos de usar aquelas variaveis;
+    Quando usamos va_start, inicializamos o primeiro argumento.
+    Quando usamos va_arg, avançamos para o próximo argumento.
+    Dentro do va_arg(list, tipo), a lista é a lista de argumentos e o tipo é o tipo que a variável deve ter.
+    Usamos va_end para informar que terminamos de usar essas variáveis.
 
-Nossa funcao deve retornar o tamanho de letras imprimidas, tanto do "format" que sera nosso array que 
-vamos verificar as flags para manipular a nossa va_list, %s ou qualquer tipo nao devem contar
-e sim o resultado da impressao dela.
+Nossa função deve retornar o número de caracteres impressos, tanto do "format" (que é o array que usamos para verificar as flags e manipular a va_list) quanto o resultado da impressão em si.
 
 ![PRINTF](https://i.imgur.com/Ncfan8J.png)
 
@@ -40,7 +36,8 @@ e sempre faco length += pois ele entra como dependencia do escopo da funcao.
 
 ### Prototipos da funcoes
 
-Nosso header recebe 10 funcoes, algumas semelhantes porem com leves diferenças, todas devolvem o valor de caracteres que foi impresso.
+Nosso cabeçalho recebe 10 funções, algumas semelhantes, mas com pequenas diferenças. Todas elas retornam a quantidade de caracteres que foram impressos
+e tambem imprime.
 
 ![HEADER](https://i.imgur.com/fcue4Wp.png)
 
