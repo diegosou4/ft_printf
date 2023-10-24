@@ -37,3 +37,12 @@ Dentro da Print c, faco a verificacao de qual sera a flag que vamos usar, todas 
 e sempre faco length += pois ele entra como dependencia do escopo da funcao.
 
 ![PRINTC](https://i.imgur.com/f3VHNQU.png)
+
+### Prototipos da funcoes
+
+Nosso header recebe 10 funcoes, algumas semelhantes porem com leves diferenças.
+
+![HEADER](https://i.imgur.com/fcue4Wp.png)
+
+
+
