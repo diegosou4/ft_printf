@@ -40,9 +40,38 @@ e sempre faco length += pois ele entra como dependencia do escopo da funcao.
 
 ### Prototipos da funcoes
 
-Nosso header recebe 10 funcoes, algumas semelhantes porem com leves diferenças.
+Nosso header recebe 10 funcoes, algumas semelhantes porem com leves diferenças, todas devolvem o valor de caracteres que foi impresso.
 
 ![HEADER](https://i.imgur.com/fcue4Wp.png)
+
+# Como executar o projeto
+
+
+```bash
+# clonar repositório
+git clone https://github.com/diegosou4/ft_printf/ ft_printf
+
+# entrar na pasta do projeto 
+cd ft_printf
+
+# Execute o comando para gerar 
+make
+
+# Para usar a funcao ft_printf coloque o include "./includes/ft_printf.h" no cabecario da sua main
+# E na hora de copilar
+gcc main.c libftprintf.a
+
+# Comando para apagar a funcao
+make fclean
+```
+
+
+# Autor
+
+Diego Moreira Sardinha de Souza
+
+diegmore - User da 42
+- C
 
 
 
