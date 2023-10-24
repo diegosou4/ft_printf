@@ -10,7 +10,7 @@ para números decimais em maiúsculas.
 ## Como eu fiz
 ### Introdução
 Para criar esse projeto, utilizei algumas bibliotecas para auxiliar na sua implementação.
-Como sabemos, o printf basicamente usa a função write para contar o número de caracteres impressos na tela.
+Como sabemos, o printf basicamente usa a função write para imprimir os caracteres na tela.
 Para isso, utilizei a biblioteca <unistd.h> para ter acesso à função write. Além disso, utilizei 
 a biblioteca <stdarg.h>, pois uma das particularidades do printf é aceitar uma quantidade 
 indefinida de argumentos. Dentro dessa biblioteca, temos algumas macros que nos ajudam a lidar com isso
