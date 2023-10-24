@@ -31,7 +31,9 @@ Nossa funcao deve retornar o tamanho de letras imprimidas, tanto do "format" que
 vamos verificar as flags para manipular a nossa va_list, %s ou qualquer tipo nao devem contar
 e sim o resultado da impressao dela.
 
+![PRINTF](https://i.imgur.com/Ncfan8J.png)
+
 Dentro da Print c, faco a verificacao de qual sera a flag que vamos usar, todas as funcoes retornam a quantidade de letras ou numeros impressos
 e sempre faco length += pois ele entra como dependencia do escopo da funcao.
 
-
+![PRINTC](https://i.imgur.com/f3VHNQU.png)
